@@ -1,13 +1,13 @@
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "Up") {
         if (angle > 10) {
-            maqueen.servoRun(maqueen.Servos.S1, angle)
+            maqueen.servoRun(maqueen.Servos.S1, 10)
             angle += -3
             basic.pause(100)
         }
     } else if (receivedString == "Down") {
         if (angle < 170) {
-            maqueen.servoRun(maqueen.Servos.S1, angle)
+            maqueen.servoRun(maqueen.Servos.S1, 170)
             angle += 3
             basic.pause(100)
         }
@@ -31,4 +31,4 @@ radio.onReceivedValue(function (name, value) {
 let angle = 0
 radio.setGroup(1)
 angle = 90
-maqueen.servoRun(maqueen.Servos.S1, angle)
+maqueen.servoRun(maqueen.Servos.S1, 90)
